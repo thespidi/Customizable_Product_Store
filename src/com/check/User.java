@@ -1,30 +1,32 @@
-package com.ghulam;
+package com.customisableproductstore;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
-	private String name;
-	private String mobileNo;
+    private String name;
+    private String email;
+    private List<String> orderHistory;
 
-	public User() {
-	}
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+        this.orderHistory = new ArrayList<>();
+    }
 
-	public User(String name, String mobileNo) {
-		this.name = name;
-		this.mobileNo = mobileNo;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return String.format("%-25s", name);
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public List<String> getOrderHistory() {
+        return orderHistory;
+    }
 
-	public String getMobileNo() {
-		return mobileNo;
-	}
-
-	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
-	}
+    public void addOrder(String order) {
+        orderHistory.add(order);
+    }
 }
