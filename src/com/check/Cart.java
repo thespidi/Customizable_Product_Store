@@ -1,4 +1,14 @@
 package com.ghulam;
+import com.ghulam.utils.ValidationUtils;
+
+public void setQuantity(int quantity) {
+    if (!ValidationUtils.isValidQuantity(quantity)) {
+        ValidationUtils.showError("Quantity must be positive.");
+        return;
+    }
+    this.quantity = quantity;
+    updateTotal();
+}
 
 public class Cart {
 	private int id;
