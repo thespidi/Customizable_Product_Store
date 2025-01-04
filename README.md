@@ -1,4 +1,4 @@
-# E-Commerce Console Base
+# Customizable_product_store
 
 It's build on Core Java
 
