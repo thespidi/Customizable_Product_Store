@@ -1,1 +1,15 @@
-/bin
+# IDE files
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# Build files
+bin/
+build/
+target/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
